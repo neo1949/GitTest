@@ -62,21 +62,28 @@ git config --global user.email "you.email"
 
 
 如果要在某个当前项目中使用其他名字或者电邮，只要去掉 <code>--global</code> 选项或者使用 <code>--local</code> 选项重新配置即可，新的设定保存在当前项目的 .git/config 文件里：
+
+不使用 <code>--global</code> 参数：
 ```
 git config user.name "neo"
 git config user.email "neo@qq.com"
 ```
 查看配置信息：
-> user.name=neo
+```
+user.name=neo
 user.email=neo@qq.com
+```
 
+使用 <code>--local</code> 参数：
 ```
 git config --local user.name "neo1949"
 git config --local user.email "neo1949@qq.com"
 ```
-查看配置信息:
-> user.name=neo1949
+查看配置信息：
+```
+user.name=neo1949
 user.email=neo1949@qq.com
+```
 
 如果我们想撤销本地配置的用户名或邮箱，使用默认的全局配置，只需要通过下面的命令取消本地配置即可：
 ```
@@ -84,8 +91,8 @@ git config --unset user.name
 git config --unset user.email
 ```
 
-再查看本地配置信息的时候，发现刚才设置的本地用户名和邮箱配置均被删除了。
+再查看本地配置信息的时候，发现刚才的本地用户名和邮箱配置已经没了。
 
 更多配置请参考 [起步 - 初次运行 Git 前的配置](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
 
-通过上面几部简单的操作，一个本地仓库就创建好了。下次再创建仓库时，默认使用之前配置好的信息，如果需要修改用户名和邮箱时，按照上面的方法修改即可。
+通过上面几部简单的操作，一个本地仓库就创建好了。下次再创建仓库时，默认使用之前配置信息，如果需要修改用户名和邮箱，按照上面的命令操作即可。
