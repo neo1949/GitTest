@@ -47,10 +47,12 @@ git config --list
 
 ### 配置用户信息
 在使用 Git 正式提交之前需要配置用户名和邮箱，这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录。如果之前已经在其它地方配置过用户信息，那么在查看配置信息时会看到类似的配置信息：
-> user.email=you.email
+```
+user.email=you.email
 user.name=you.name
+```
 
-如果还没有配置过用户信息，通过下面的信息配置用户名和邮箱：
+如果还没有配置过用户信息，通过下面的命令配置用户名和邮箱：
 ```
 git config --global user.name "you.name"
 git config --global user.email "you.email"
@@ -93,6 +95,6 @@ git config --unset user.email
 
 再查看本地配置信息的时候，发现刚才的本地用户名和邮箱配置已经没了。
 
-更多配置请参考 [起步 - 初次运行 Git 前的配置](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
-
 通过上面几部简单的操作，一个本地仓库就创建好了。下次再创建仓库时，默认使用之前配置信息，如果需要修改用户名和邮箱，按照上面的命令操作即可。
+
+更多配置请参考 [起步 - 初次运行 Git 前的配置](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)。
