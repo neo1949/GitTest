@@ -23,4 +23,32 @@ git merge issue2
 ```
 此时应该一切操作正常。
 
-5.在文件 TestIssue2 继续添加一些内容后再执行 merge 操作：
+5.在文件 TestIssue2 继续添加一些内容按照下面的操作进行：
+```
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   TestIssue2.md
+$ git add .
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   TestIssue2.md
+$ git commit --amend
+[master 2ed25e3] add TestIssue2.md for test
+ Date: Wed May 23 15:27:48 2018 +0800
+ 1 file changed, 26 insertions(+)
+ create mode 100644 TestIssue2.md
+$ git merge issue2
+[master 2ed25e3] add TestIssue2.md for test
+ Date: Wed May 23 15:27:48 2018 +0800
+ 1 file changed, 26 insertions(+)
+ create mode 100644 TestIssue2.md
+```
+
+可以看到发生了冲突。
